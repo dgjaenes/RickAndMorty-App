@@ -1,0 +1,61 @@
+//
+//  CharacterCardView.swift
+//  RickAndMorty
+//
+
+import SwiftUI
+
+struct CharacterCardView: View {
+    let character: CharacterDO
+    @State private var image: UIImage? = nil
+    
+    var body: some View {
+        HStack(alignment: .center) {
+            getImage()
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(.white)
+                .background(Color.gray.opacity(0.4))
+                .frame(width: 120, height: 120)
+                .cornerRadius(8)
+                .padding(6)
+            VStack(alignment: .leading, spacing: 10) {
+                Text(character.name)
+                    .font(.headline)
+                HStack(spacing: 5) {
+                    Circle()
+                        .fill(character.status == .alive ? Color.green : Color.red)
+                        .frame(width: 10, height: 10)
+                    Text(character.status.rawValue)
+                        .font(.subheadline)
+                }
+                Text(character.species)
+                    .font(.subheadline)
+                Text(character.gender)
+                    .font(.subheadline)
+            }
+            .foregroundColor(.white)
+            .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
+            .cornerRadius(6)
+        }
+        .cornerRadius(6)
+        .padding(0)
+        .onAppear {
+            loadImage()
+                }
+    }
+    
+    private func loadImage() {
+        if let imageUrl = URL(string: character.image) {
+            UIImage.download(from: imageUrl) { (image) in
+                DispatchQueue.main.async {
+                    self.image = image
+                }
+            }
+        }
+    }
+    
+    private func getImage() -> Image {
+        return Image(uiImage: image ?? UIImage(systemName: "person.fill")!)
+    }
+}
