@@ -1,13 +1,15 @@
 //
-//  CharacterListView.swift
+//  LocationsListView.swift
 //  RickAndMorty
+//
+//  Created by David Gonzalez Jaenes on 16/4/24.
 //
 
 import SwiftUI
 
-struct CharacterListView: View {
+struct LocationsListView: View {
     
-    @ObservedObject var viewModel = CharacterListViewModel(characterInteractor: InteractorProvaider.getCharactersInteractor())
+    @ObservedObject var viewModel = LocationListViewModel(locationInteractor: InteractorProvaider.getLocationsInteractor())
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -30,21 +32,20 @@ struct CharacterListView: View {
     }
 }
 
-private extension CharacterListView {
+private extension LocationsListView {
     
     var searchField: some View {
         HStack(alignment: .center) {
-            TextField("example: Morty, Smith, Lincler ...", text: $viewModel.name)
+            TextField("example: Anatomy Park, Earth, Citadel of Ricks ...", text: $viewModel.name)
+                .padding(.trailing, 15.0)
         }
     }
     
     var listCharacters: some View {
         List {
-            Section(header: Text("Characters")) {
-                ForEach(viewModel.characters, id: \.id) { character in
-                    NavigationLink(destination: CharacterDetail(character: character)) {
-                        CharacterCardView(character: character)
-                    }
+            Section(header: Text("Locations")) {
+                ForEach(viewModel.locations, id: \.id) { location in
+                    LocationCardView(location: location)
                     .listRowBackground(Color.black)
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.white)
@@ -58,8 +59,9 @@ private extension CharacterListView {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LocationsListView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterListView()
+        LocationsListView()
     }
 }
+

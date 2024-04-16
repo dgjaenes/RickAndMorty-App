@@ -13,47 +13,33 @@ struct CharacterDO: Codable {
     let species: String
     let type: String
     let gender: String
-    let origin, location: LocationDO
+    let origin, location: LocationCharacterDO
     let image: String
     let episode: [String]
     let url: String
     let created: String
+    
+    struct LocationCharacterDO: Codable {
+        let name: String
+        let url: String
+        
+        func getId() -> Int? {
+            var num: Int? = nil
+            if let range = self.url.range(of: "/[0-9]+") {
+                let numberString = String(self.url[range]).replacingOccurrences(of: "/", with: "")
+                if let number = Int(numberString) {
+                    num = number
+                }
+            }
+            return num
+        }
+    }
 }
 
 // MARK: - LocationDO
-struct LocationDO: Codable {
-    let name: String
-    let url: String
-}
 
 enum StatusDO: String, Codable {
     case alive = "Alive"
     case dead = "Dead"
     case unknown = "unknown"
 }
-
-extension CharacterDO: Equatable, Hashable {
-    static func == (lhs: CharacterDO, rhs: CharacterDO) -> Bool {
-        return lhs.id == rhs.id &&
-            lhs.name == rhs.name &&
-            lhs.status == rhs.status &&
-            lhs.species == rhs.species &&
-            lhs.type == rhs.type &&
-            lhs.gender == rhs.gender &&
-            lhs.origin == rhs.origin &&
-            lhs.location == rhs.location &&
-            lhs.image == rhs.image &&
-            lhs.episode == rhs.episode &&
-            lhs.url == rhs.url &&
-            lhs.created == rhs.created
-    }
-}
-
-extension LocationDO: Equatable, Hashable {
-    static func == (lhs: LocationDO, rhs: LocationDO) -> Bool {
-        return lhs.name == rhs.name &&
-            lhs.url == rhs.url
-    }
-}
-
-extension StatusDO: Equatable, Hashable {}

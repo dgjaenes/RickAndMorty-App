@@ -30,6 +30,13 @@
 		99F711F22A3A72CB00811D22 /* ViewModelProvaider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F711F12A3A72CB00811D22 /* ViewModelProvaider.swift */; };
 		D52B3E122BC923C900FB240F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B3E112BC923C900FB240F /* AuthView.swift */; };
 		D52B3E142BC927E500FB240F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B3E132BC927E500FB240F /* AuthViewModel.swift */; };
+		D58277B02BCED71100773158 /* LocationListDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58277AF2BCED71100773158 /* LocationListDO.swift */; };
+		D58277B22BCED75000773158 /* LocationDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58277B12BCED75000773158 /* LocationDO.swift */; };
+		D58277B42BCEDA6600773158 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58277B32BCEDA6600773158 /* LocationRepository.swift */; };
+		D58277B62BCEDBE300773158 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58277B52BCEDBE300773158 /* LocationsListView.swift */; };
+		D58277B82BCEDCE500773158 /* LocationsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58277B72BCEDCE500773158 /* LocationsListViewModel.swift */; };
+		D58277BA2BCEDD1D00773158 /* LocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58277B92BCEDD1D00773158 /* LocationInteractor.swift */; };
+		D58277BC2BCEDF5400773158 /* LocationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58277BB2BCEDF5400773158 /* LocationCardView.swift */; };
 		D58BC5B82BCAF4E000D1BD78 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58BC5B72BCAF4E000D1BD78 /* MainView.swift */; };
 		D5E205AE2BC93C1B0082A442 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5E205AD2BC93C1B0082A442 /* FirebaseAnalytics */; };
 		D5E205B02BC93C1B0082A442 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D5E205AF2BC93C1B0082A442 /* FirebaseAuth */; };
@@ -80,6 +87,13 @@
 		99F711F12A3A72CB00811D22 /* ViewModelProvaider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProvaider.swift; sourceTree = "<group>"; };
 		D52B3E112BC923C900FB240F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		D52B3E132BC927E500FB240F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		D58277AF2BCED71100773158 /* LocationListDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListDO.swift; sourceTree = "<group>"; };
+		D58277B12BCED75000773158 /* LocationDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDO.swift; sourceTree = "<group>"; };
+		D58277B32BCEDA6600773158 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		D58277B52BCEDBE300773158 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
+		D58277B72BCEDCE500773158 /* LocationsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListViewModel.swift; sourceTree = "<group>"; };
+		D58277B92BCEDD1D00773158 /* LocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInteractor.swift; sourceTree = "<group>"; };
+		D58277BB2BCEDF5400773158 /* LocationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCardView.swift; sourceTree = "<group>"; };
 		D58BC5B72BCAF4E000D1BD78 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D5E205B12BC93D240082A442 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +198,9 @@
 				99F711D72A39E68800811D22 /* CharacterListViewModel.swift */,
 				99F711D92A39EA1A00811D22 /* CharacterCardView.swift */,
 				99F711CF2A39DB2500811D22 /* CharacterDetail.swift */,
+				D58277B52BCEDBE300773158 /* LocationsListView.swift */,
+				D58277B72BCEDCE500773158 /* LocationsListViewModel.swift */,
+				D58277BB2BCEDF5400773158 /* LocationCardView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -203,6 +220,8 @@
 			children = (
 				99F711D32A39DD3800811D22 /* CharacterDO.swift */,
 				99F711D52A39DEFF00811D22 /* CharacterListDO.swift */,
+				D58277B12BCED75000773158 /* LocationDO.swift */,
+				D58277AF2BCED71100773158 /* LocationListDO.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -219,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				99F711E62A3A126000811D22 /* CharacterInteractor.swift */,
+				D58277B92BCEDD1D00773158 /* LocationInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -228,6 +248,7 @@
 			children = (
 				99F711E22A3A10DF00811D22 /* ManagerAppRepository.swift */,
 				99F711E42A3A115D00811D22 /* CharacterRepository.swift */,
+				D58277B32BCEDA6600773158 /* LocationRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -380,18 +401,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58277B42BCEDA6600773158 /* LocationRepository.swift in Sources */,
 				D52B3E122BC923C900FB240F /* AuthView.swift in Sources */,
 				99F711F02A3A725C00811D22 /* InteractorProvaider.swift in Sources */,
 				99F711CE2A39DA1F00811D22 /* CharacterListView.swift in Sources */,
 				99F711E32A3A10DF00811D22 /* ManagerAppRepository.swift in Sources */,
+				D58277B82BCEDCE500773158 /* LocationsListViewModel.swift in Sources */,
+				D58277B62BCEDBE300773158 /* LocationsListView.swift in Sources */,
 				99F711DE2A3A075100811D22 /* extension+UIImage.swift in Sources */,
 				D52B3E142BC927E500FB240F /* AuthViewModel.swift in Sources */,
 				99F711D62A39DEFF00811D22 /* CharacterListDO.swift in Sources */,
 				99F711E72A3A126000811D22 /* CharacterInteractor.swift in Sources */,
+				D58277BC2BCEDF5400773158 /* LocationCardView.swift in Sources */,
 				99F711D02A39DB2500811D22 /* CharacterDetail.swift in Sources */,
+				D58277B22BCED75000773158 /* LocationDO.swift in Sources */,
 				D58BC5B82BCAF4E000D1BD78 /* MainView.swift in Sources */,
 				99F711F22A3A72CB00811D22 /* ViewModelProvaider.swift in Sources */,
+				D58277B02BCED71100773158 /* LocationListDO.swift in Sources */,
 				99F711E52A3A115D00811D22 /* CharacterRepository.swift in Sources */,
+				D58277BA2BCEDD1D00773158 /* LocationInteractor.swift in Sources */,
 				99F711D82A39E68800811D22 /* CharacterListViewModel.swift in Sources */,
 				99F711DA2A39EA1A00811D22 /* CharacterCardView.swift in Sources */,
 				9987B6502A39CD88002976CA /* RickAndMortyApp.swift in Sources */,

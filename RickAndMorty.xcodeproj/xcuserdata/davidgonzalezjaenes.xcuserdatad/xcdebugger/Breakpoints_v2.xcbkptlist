@@ -36,53 +36,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6145047F-FE5D-42DE-9D06-25E8245EE3EA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RickAndMorty/Presentation/AuthView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "6145047F-FE5D-42DE-9D06-25E8245EE3EA - 4fc3244d05bdfff0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.ProgressView&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;, SwiftUI.Form&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.pickerStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PickerStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.autocapitalization(__C.UITextAutocapitalizationType) -&gt; some&gt;&gt;.0, SwiftUI.SecureField&lt;SwiftUI.Text&gt;, Swift.Optional&lt;SwiftUI.SecureField&lt;SwiftUI.Text&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;&gt;, Swift.Optional&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;&gt;)&gt; in RickAndMorty.AuthView.body.getter : some"
-                  moduleName = "RickAndMorty"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/davidgonzalezjaenes/Documents/RickAndMorty-main/RickAndMorty/Presentation/AuthView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "847">
-               </Location>
-               <Location
-                  uuid = "6145047F-FE5D-42DE-9D06-25E8245EE3EA - 8cd26dc72cfe3578"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.ProgressView&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;, &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0&gt;, Swift.Optional&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;&gt;)&gt; in RickAndMorty.AuthView.body.getter : some"
-                  moduleName = "RickAndMorty"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/davidgonzalezjaenes/Documents/RickAndMorty-main/RickAndMorty/Presentation/AuthView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "849">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

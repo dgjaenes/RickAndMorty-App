@@ -10,15 +10,25 @@ struct CharacterDetail: View {
     @State private var image: UIImage? = nil
     
     var body: some View {
-        ZStack {
+        VStack(alignment: .leading) {
+            HStack {
+                Image("home")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100.0, height: 100.0)
+                Text("Rick and Morty")
+                    .font(.title)
+                    .foregroundColor(.black)
+            }
+            ZStack {
                 LinearGradient(
                     gradient: Gradient(
-                        colors: [Color.gray, Color.black]),
+                        colors: [Color.white, Color.black]),
                     startPoint: .top,
                     endPoint: .bottom)
                 .ignoresSafeArea()
-                VStack(alignment: .leading, spacing: 10) {
-                    HStack(spacing: 10) {
+                VStack(alignment: .leading, spacing: 10.0) {
+                    HStack {
                         getImage()
                             .resizable()
                             .scaledToFit()
@@ -64,8 +74,9 @@ struct CharacterDetail: View {
                     .padding(6)
                 }
             }
-        .onAppear {
-            loadImage()
+            .onAppear {
+                loadImage()
+            }
         }
     }
     
@@ -83,3 +94,12 @@ struct CharacterDetail: View {
         return Image(uiImage: image ?? UIImage(systemName: "person.fill")!)
     }
 }
+
+//struct CharacterDetail_Previews: PreviewProvider {
+//
+//    static let character = CharacterDO(id: 3, name: "Summer Smith", status: .alive, species: "Human", type: "", gender: "Female", origin: LocationDO(name: "Earth", url: ""), location: LocationDO(name: "Citadel of Ricks", url: ""), image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg", episode: ["https://rickandmortyapi.com/api/episode/6"], url: "https://rickandmortyapi.com/api/character/3", created: "2017-11-04T19:09:56.428Z")
+//
+//    static var previews: some View {
+//        CharacterDetail(character: character)
+//    }
+//}
