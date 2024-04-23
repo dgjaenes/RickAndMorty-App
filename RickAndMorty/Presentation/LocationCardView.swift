@@ -16,22 +16,31 @@ struct LocationCardView: View {
                 Text(location.name)
                     .font(.headline)
                 HStack(spacing: 5) {
+                    Text("Dimension:")
+                        .font(.headline)
                     Text(location.dimension)
                         .font(.subheadline)
                 }
+                Text("Created:")
+                    .font(.headline)
                 Text(location.created)
                     .font(.subheadline)
-                Text(location.type)
-                    .font(.subheadline)
-                Text("Residents: " + String(location.residents.count))
-                    .font(.subheadline)
+                HStack {
+                    Text("Type:")
+                        .font(.headline)
+                    Text(location.type)
+                        .font(.subheadline)
+                }
+                HStack {
+                    Text("Residents:")
+                        .font(.headline)
+                    Text(String(location.residents.count))
+                        .font(.subheadline)
+                }
             }
             .foregroundColor(.white)
             .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
-            .cornerRadius(6)
         }
-        .cornerRadius(6)
-        .padding(0)
     }
 }
 

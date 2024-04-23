@@ -33,7 +33,7 @@ class CharacterRepository: ManagerAppRepository, CharacterRepositoryProtocol {
         components.host = TransactionsAPI.host
         components.path = "\(TransactionsAPI.path)\(id ?? "")"
         if let id = id {
-            components.path = "\(TransactionsAPI.path)\(id)"
+            components.path = "\(TransactionsAPI.path)/\(id)"
         }
         else if let page = page {
             let pageParameter = URLQueryItem(name: "page", value: String(page))

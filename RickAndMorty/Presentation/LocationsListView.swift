@@ -23,7 +23,7 @@ struct LocationsListView: View {
             }
             searchField
                 .padding(.leading, 20)
-            listCharacters
+            listLocations
         }
     }
     
@@ -41,14 +41,19 @@ private extension LocationsListView {
         }
     }
     
-    var listCharacters: some View {
+    var listLocations: some View {
         List {
-            Section(header: Text("Locations")) {
+            Section(header: Text("Locations")
+                .padding(.top, 10)) {
                 ForEach(viewModel.locations, id: \.id) { location in
-                    LocationCardView(location: location)
-                    .listRowBackground(Color.black)
+                    NavigationLink(destination: CharacterLocationListView(location: location)) {
+                        LocationCardView(location: location)
+                    }
                     .buttonStyle(PlainButtonStyle())
+                    .listRowBackground(Color.black)
                     .foregroundColor(.white)
+                    .listRowSeparatorTint(Color.white)
+                    .listRowSeparator(.visible)
                 }
             }
         }

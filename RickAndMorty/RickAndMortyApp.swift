@@ -20,7 +20,6 @@ struct RickAndMortyApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            //CharacterListView()
             AuthView()
         }
     }

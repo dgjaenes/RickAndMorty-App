@@ -30,6 +30,8 @@
 		99F711F22A3A72CB00811D22 /* ViewModelProvaider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F711F12A3A72CB00811D22 /* ViewModelProvaider.swift */; };
 		D52B3E122BC923C900FB240F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B3E112BC923C900FB240F /* AuthView.swift */; };
 		D52B3E142BC927E500FB240F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B3E132BC927E500FB240F /* AuthViewModel.swift */; };
+		D536B0DC2BD814C4007ED824 /* CharacterLocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536B0DB2BD814C3007ED824 /* CharacterLocationListView.swift */; };
+		D536B0DE2BD81641007ED824 /* CharacterLocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536B0DD2BD81641007ED824 /* CharacterLocationListViewModel.swift */; };
 		D58277B02BCED71100773158 /* LocationListDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58277AF2BCED71100773158 /* LocationListDO.swift */; };
 		D58277B22BCED75000773158 /* LocationDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58277B12BCED75000773158 /* LocationDO.swift */; };
 		D58277B42BCEDA6600773158 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58277B32BCEDA6600773158 /* LocationRepository.swift */; };
@@ -87,6 +89,8 @@
 		99F711F12A3A72CB00811D22 /* ViewModelProvaider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProvaider.swift; sourceTree = "<group>"; };
 		D52B3E112BC923C900FB240F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		D52B3E132BC927E500FB240F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		D536B0DB2BD814C3007ED824 /* CharacterLocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLocationListView.swift; sourceTree = "<group>"; };
+		D536B0DD2BD81641007ED824 /* CharacterLocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLocationListViewModel.swift; sourceTree = "<group>"; };
 		D58277AF2BCED71100773158 /* LocationListDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListDO.swift; sourceTree = "<group>"; };
 		D58277B12BCED75000773158 /* LocationDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDO.swift; sourceTree = "<group>"; };
 		D58277B32BCEDA6600773158 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 				D58277B52BCEDBE300773158 /* LocationsListView.swift */,
 				D58277B72BCEDCE500773158 /* LocationsListViewModel.swift */,
 				D58277BB2BCEDF5400773158 /* LocationCardView.swift */,
+				D536B0DB2BD814C3007ED824 /* CharacterLocationListView.swift */,
+				D536B0DD2BD81641007ED824 /* CharacterLocationListViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -408,6 +414,7 @@
 				99F711E32A3A10DF00811D22 /* ManagerAppRepository.swift in Sources */,
 				D58277B82BCEDCE500773158 /* LocationsListViewModel.swift in Sources */,
 				D58277B62BCEDBE300773158 /* LocationsListView.swift in Sources */,
+				D536B0DC2BD814C4007ED824 /* CharacterLocationListView.swift in Sources */,
 				99F711DE2A3A075100811D22 /* extension+UIImage.swift in Sources */,
 				D52B3E142BC927E500FB240F /* AuthViewModel.swift in Sources */,
 				99F711D62A39DEFF00811D22 /* CharacterListDO.swift in Sources */,
@@ -420,6 +427,7 @@
 				D58277B02BCED71100773158 /* LocationListDO.swift in Sources */,
 				99F711E52A3A115D00811D22 /* CharacterRepository.swift in Sources */,
 				D58277BA2BCEDD1D00773158 /* LocationInteractor.swift in Sources */,
+				D536B0DE2BD81641007ED824 /* CharacterLocationListViewModel.swift in Sources */,
 				99F711D82A39E68800811D22 /* CharacterListViewModel.swift in Sources */,
 				99F711DA2A39EA1A00811D22 /* CharacterCardView.swift in Sources */,
 				9987B6502A39CD88002976CA /* RickAndMortyApp.swift in Sources */,

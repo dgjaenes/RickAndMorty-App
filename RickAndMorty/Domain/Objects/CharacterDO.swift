@@ -22,17 +22,6 @@ struct CharacterDO: Codable {
     struct LocationCharacterDO: Codable {
         let name: String
         let url: String
-        
-        func getId() -> Int? {
-            var num: Int? = nil
-            if let range = self.url.range(of: "/[0-9]+") {
-                let numberString = String(self.url[range]).replacingOccurrences(of: "/", with: "")
-                if let number = Int(numberString) {
-                    num = number
-                }
-            }
-            return num
-        }
     }
 }
 
