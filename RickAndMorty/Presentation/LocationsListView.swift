@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LocationsListView: View {
     
-    @ObservedObject var viewModel = LocationListViewModel(locationInteractor: InteractorProvaider.getLocationsInteractor())
+    @ObservedObject var viewModel = ViewModelProvaider.viewModelLocationList()
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -17,7 +17,7 @@ struct LocationsListView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100.0, height: 100.0)
-                Text("Rick and Morty")
+                Text("RICK AND MORTY WORLD")
                     .font(.title)
                     .foregroundColor(.black)
             }

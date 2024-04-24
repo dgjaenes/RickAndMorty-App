@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct MainView: View {
 
@@ -17,7 +18,7 @@ struct MainView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 100.0, height: 100.0)
-                    Text("Rick and Morty")
+                    Text("RICK AND MORTY WORLD")
                         .font(.title)
                         .foregroundColor(.black)
                 }
@@ -53,7 +54,17 @@ struct MainView: View {
             }
             .navigationBarItems(trailing:
                             Button(action: {
-                                
+                do {
+                    try Auth.auth().signOut()
+                    
+                    if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                       let window = windowScene.windows.first {
+                        window.rootViewController = UIHostingController(rootView: AuthView())
+                    }
+                    Analytics.logEvent("close_sesion", parameters: nil)
+                } catch {
+                    Analytics.logEvent("error_close_sesion", parameters: nil)
+                }
                             }) {
                                 Image(uiImage: UIImage(systemName: "person.badge.minus.fill")!)
                             }

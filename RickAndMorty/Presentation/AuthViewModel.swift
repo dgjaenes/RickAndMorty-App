@@ -7,7 +7,6 @@
 
 import Combine
 import Firebase
-import FirebaseAuth
 
 enum AuthMode {
     case signIn
@@ -48,6 +47,7 @@ class AuthViewModel: ObservableObject {
 
             self.isAuthenticating = false
             self.isAuthenticated = true
+            Analytics.logEvent(AnalyticsEventLogin, parameters: nil)
             self.reset()
         }
     }
@@ -71,6 +71,7 @@ class AuthViewModel: ObservableObject {
 
             self.isAuthenticating = false
             self.isAuthenticated = true
+            Analytics.logEvent(AnalyticsEventSignUp, parameters: nil)
             self.reset()
         }
     }

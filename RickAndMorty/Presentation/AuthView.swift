@@ -29,7 +29,7 @@ struct AuthView: View {
 private extension AuthView {
     private var headerView: some View {
         VStack {
-            Text("Rick and Morty")
+            Text("RICK AND MORTY WORLD")
                 .font(.largeTitle.bold())
                 .foregroundColor(.black)
             Image("home")

@@ -11,7 +11,7 @@ class CharacterRepositoryMock: CharacterRepository {
     
     let mockRepository = ManagerAppRepositoryMock.shared
     
-    override func execute<T>(components: URLComponents) -> AnyPublisher<T, RAMAppError> where T: Decodable {
+    override internal func execute<T>(components: URLComponents, inCacheValid: Bool = true) -> AnyPublisher<T, RAMAppError> where T: Decodable {
         return mockRepository.execute(components: components)
     }
 }

@@ -7,7 +7,7 @@ import SwiftUI
 
 struct CharacterListView: View {
     
-    @ObservedObject var viewModel = CharacterListViewModel(characterInteractor: InteractorProvaider.getCharactersInteractor())
+    @ObservedObject var viewModel = ViewModelProvaider.viewModelListCharacter()
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -15,7 +15,7 @@ struct CharacterListView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100.0, height: 100.0)
-                Text("Rick and Morty")
+                Text("RICK AND MORTY WORLD")
                     .font(.title)
                     .foregroundColor(.black)
             }

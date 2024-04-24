@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Firebase
 
 final class CharacterLocationListViewModel: ObservableObject {
     
@@ -33,6 +34,7 @@ final class CharacterLocationListViewModel: ObservableObject {
                 loadCharacter(id: item)
             }
         }
+        Analytics.logEvent("link_residents", parameters: ["residents": totalCharacters])
     }
     
     private func loadCharacter(id: Int) {
@@ -56,12 +58,6 @@ final class CharacterLocationListViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.characters.append(response)
                     self.totalCharacters = self.characters
-                    //self.totalPages = response.info.pages
-                    
-//                    self.currentPage += 1
-//                    if self.currentPage <= self.totalPages {
-//                        self.loadAllPages()
-//                    }
                 }
             })
             .store(in: &cancellables)

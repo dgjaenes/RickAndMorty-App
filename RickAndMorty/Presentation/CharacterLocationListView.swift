@@ -15,7 +15,7 @@ struct CharacterLocationListView: View {
     
     init(location: LocationDO ) {
         self.location = location
-        self.viewModel = CharacterLocationListViewModel(characterInteractor: InteractorProvaider.getCharactersInteractor(), location: self.location)
+        self.viewModel = ViewModelProvaider.viewModelCharacterLocationList(location: self.location)
     }
     
     var body: some View {
@@ -54,7 +54,6 @@ private extension CharacterLocationListView {
             }
         }
         .onAppear {
-            //viewModel.name = ""
             initView()
         }
     }

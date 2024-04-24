@@ -7,10 +7,10 @@ import Foundation
 
 struct InteractorProvaider {
     static func getCharactersInteractor() -> CharacterInteractorProtocol {
-        return CharacterInteractor(characterRepository: CharacterRepository())
+        return CharacterInteractor(characterRepository: RepositoryProvaider.getCharacterRepository())
     }
     
     static func getLocationsInteractor() -> LocationInteractorProtocol {
-        return LocationInteractor(locationRepository: LocationRepository())
+        return LocationInteractor(locationRepository: RepositoryProvaider.getLocationsRepository())
     }
 }
